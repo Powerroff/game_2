@@ -7,13 +7,14 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    
+    public GameObject bmPrefab;
+    public BoardManager bm;
     
     
 
 
     void Start() {
-
+        bm = Instantiate(bmPrefab, transform).GetComponent<BoardManager>();
     }
 
     void Update() {

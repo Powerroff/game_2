@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10cec672b62fe0c4bb02dddf7564b1bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grassSprites:
+  - {fileID: -1347532211411968617, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
+  - {fileID: -7645372005702169758, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
+  - {fileID: 6891631753638271631, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
   tilePrefab: {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3,
     type: 3}
   canvas: {fileID: 729900994}

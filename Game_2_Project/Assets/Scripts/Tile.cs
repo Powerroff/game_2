@@ -9,6 +9,7 @@ public class Tile : MonoBehaviour
     BoardManager bm;
 
     //Personal Vars
+    SpriteRenderer sr;
 
 
 
@@ -19,6 +20,12 @@ public class Tile : MonoBehaviour
     {
         gm = GameManager.instance;
         bm = gm.bm;
+        sr = GetComponent<SpriteRenderer>();
+    }
+
+    public void setSprite(Sprite s) {
+        if (sr == null) sr = GetComponent<SpriteRenderer>();
+        sr.sprite = s;
     }
 
     // Update is called once per frame

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
@@ -26,6 +24,15 @@ public class Tile : MonoBehaviour
     public void setSprite(Sprite s) {
         if (sr == null) sr = GetComponent<SpriteRenderer>();
         sr.sprite = s;
+    }
+
+    void OnMouseOver() {
+        Debug.Log("MO");
+        sr.color = Color.gray;
+    }
+
+    void OnMouseExit() {
+        sr.color = Color.white;
     }
 
     // Update is called once per frame

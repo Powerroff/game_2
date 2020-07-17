@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
         bm = Instantiate(bmPrefab, transform).GetComponent<BoardManager>();
         bm.generateBoard();
         bm.renderBoard();
+        bm.initParty();
     }
 
     void Update() {

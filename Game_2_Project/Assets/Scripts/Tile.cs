@@ -13,21 +13,13 @@ public class Tile : MonoBehaviour
 
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        gm = GameManager.instance;
-        bm = gm.bm;
-        sr = GetComponent<SpriteRenderer>();
-    }
+
 
     public void setSprite(Sprite s) {
-        if (sr == null) sr = GetComponent<SpriteRenderer>();
         sr.sprite = s;
     }
 
     void OnMouseOver() {
-        Debug.Log("MO");
         sr.color = Color.gray;
     }
 
@@ -35,9 +27,19 @@ public class Tile : MonoBehaviour
         sr.color = Color.white;
     }
 
+    void OnMouseDown() {
+        bm.moveTo(Vector2Int.RoundToInt((Vector2)transform.position));
+    }
+
     // Update is called once per frame
     void Update()
     {
         
+    }
+    
+    void Awake() {
+        gm = GameManager.instance;
+        bm = gm.bm;
+        sr = GetComponent<SpriteRenderer>();
     }
 }

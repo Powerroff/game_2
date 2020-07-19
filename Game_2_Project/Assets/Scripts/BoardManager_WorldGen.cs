@@ -7,6 +7,7 @@ using System.Diagnostics;
 public partial class BoardManager : MonoBehaviour
 {
     public Sprite[] grassSprites;
+    public Sprite[] invertedGrassSprites;
     public GameObject tilePrefab;
 
     Dictionary<Vector2Int, TileInfo> tileDict;
@@ -25,6 +26,8 @@ public partial class BoardManager : MonoBehaviour
         public void init() {
             biomes = new List<Biome>();
             biomes.Add(new DefaultBiome(new Vector2Int(0, 0)));
+            for (int i = 0; i < 5; i++)
+                biomes.Add(Biome.random(new Vector2Int(Random.Range(-30, 30), Random.Range(-30, 30))));
         }
 
         public Biome getBiome(Vector2Int point) {
@@ -39,6 +42,19 @@ public partial class BoardManager : MonoBehaviour
         }
 
     }
+
+
+    class TileInfo
+    {
+        public bool explored;
+        public Sprite sprite;
+        public TileInfo(Sprite sprite) {
+            explored = false;
+            this.sprite = sprite;
+        }
+    }
+
+
 
     abstract class Biome
     {
@@ -65,6 +81,16 @@ public partial class BoardManager : MonoBehaviour
 
         public abstract TileInfo genTile();
         
+        public static Biome random(Vector2Int center) {
+            int i = Random.Range(0, 2);
+            switch(i) {
+                case 0:
+                    return new Grasslands(center);
+                case 1:
+                default:
+                    return new InvertedGrasslands(center);
+            }
+        }
     }
 
     class DefaultBiome : Biome
@@ -79,13 +105,38 @@ public partial class BoardManager : MonoBehaviour
         }
     }
 
-    class TileInfo
+    class Grasslands : Biome
     {
-        public bool explored;
-        public Sprite sprite;
-        public TileInfo(Sprite sprite) {
-            explored = false;
-            this.sprite = sprite;
+        public Grasslands(Vector2Int center) : base(center) { }
+
+        public override TileInfo genTile() {
+            float r = Random.value;
+            if (r < .7)
+                return new TileInfo(bm.grassSprites[1]);
+            else if (r < .9)
+                return new TileInfo(bm.grassSprites[2]);
+            else if (r < .95)
+                return new TileInfo(bm.grassSprites[3]);
+            else 
+                return new TileInfo(bm.grassSprites[4]);
         }
     }
+
+    class InvertedGrasslands : Biome
+    {
+        public InvertedGrasslands(Vector2Int center) : base(center) { }
+
+        public override TileInfo genTile() {
+            float r = Random.value;
+            if (r < .7)
+                return new TileInfo(bm.invertedGrassSprites[1]);
+            else if (r < .9)
+                return new TileInfo(bm.invertedGrassSprites[2]);
+            else if (r < .95)
+                return new TileInfo(bm.invertedGrassSprites[3]);
+            else
+                return new TileInfo(bm.invertedGrassSprites[4]);
+        }
+    }
+
 }

@@ -149,5 +149,13 @@ MonoBehaviour:
   - {fileID: -1347532211411968617, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
   - {fileID: -7645372005702169758, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
   - {fileID: 6891631753638271631, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
+  - {fileID: 475435623110610922, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
+  - {fileID: 5299400320964040512, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
+  invertedGrassSprites:
+  - {fileID: -8302207301573362500, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
+  - {fileID: 6705257421430472308, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
+  - {fileID: -6553630681521959176, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
+  - {fileID: 8738227165821142038, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
+  - {fileID: -8523900327419701000, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
   tilePrefab: {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3,
     type: 3}

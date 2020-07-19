@@ -1,25 +1,22 @@
 fileFormatVersion: 2
-guid: 1a103a7a266d3fd459d27119e9f9e536
+guid: 7dc9a45724ccaaf4dab020e98edc718d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1347532211411968617
-    second: Grass_0
+      213: -8302207301573362500
+    second: InvertedGrass_0
   - first:
-      213: -7645372005702169758
-    second: Grass_1
+      213: 6705257421430472308
+    second: InvertedGrass_1
   - first:
-      213: 6891631753638271631
-    second: Grass_2
+      213: -6553630681521959176
+    second: InvertedGrass_2
   - first:
-      213: 1805938651650479569
-    second: Grass_0
+      213: 8738227165821142038
+    second: InvertedGrass_3
   - first:
-      213: 475435623110610922
-    second: Grass_3
-  - first:
-      213: 5299400320964040512
-    second: Grass_4
+      213: -8523900327419701000
+    second: InvertedGrass_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -105,7 +102,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass_0
+      name: InvertedGrass_0
       rect:
         serializedVersion: 2
         x: 0
@@ -119,14 +116,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1d556c9a2abff0910800000000000000
-      internalID: 1805938651650479569
+      spriteID: cbcb01a3272a8cc80800000000000000
+      internalID: -8302207301573362500
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_1
+      name: InvertedGrass_1
       rect:
         serializedVersion: 2
         x: 16
@@ -140,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26b0860faae26e590800000000000000
-      internalID: -7645372005702169758
+      spriteID: 47e3aeb491cdd0d50800000000000000
+      internalID: 6705257421430472308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_2
+      name: InvertedGrass_2
       rect:
         serializedVersion: 2
         x: 32
@@ -161,14 +158,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8a5966019ef3af50800000000000000
-      internalID: 6891631753638271631
+      spriteID: 8fe48c62e93dc05a0800000000000000
+      internalID: -6553630681521959176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_3
+      name: InvertedGrass_3
       rect:
         serializedVersion: 2
         x: 48
@@ -182,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aef03152e26199600800000000000000
-      internalID: 475435623110610922
+      spriteID: 61400796f4b644970800000000000000
+      internalID: 8738227165821142038
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Grass_4
+      name: InvertedGrass_4
       rect:
         serializedVersion: 2
         x: 64
@@ -203,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04717a5b3804b8940800000000000000
-      internalID: 5299400320964040512
+      spriteID: 8f8105350d505b980800000000000000
+      internalID: -8523900327419701000
       vertices: []
       indices: 
       edges: []

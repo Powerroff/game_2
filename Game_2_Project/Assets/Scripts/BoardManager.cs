@@ -34,9 +34,11 @@ public partial class BoardManager : MonoBehaviour
         }
     }
 
+
+
     public void renderBoard() {
         for (int i = -30; i <= 30; i++) {
-            for (int j = -30; j <= 30; j++) {
+            for (int j = 0; j <= 30; j++) {
                 Vector2Int loc = new Vector2Int(i, j);
                 GameObject t = Instantiate(tilePrefab, transform);
                 t.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);

@@ -30,6 +30,7 @@ public partial class BoardManager : MonoBehaviour
         else {
             TileInfo t = bioM.getBiome(loc).genTile();
             tileDict.Add(loc, t);
+            t.instantiate(loc, transform);
             return t;
         }
     }
@@ -39,12 +40,13 @@ public partial class BoardManager : MonoBehaviour
     public void renderBoard() {
         for (int i = -30; i <= 30; i++) {
             for (int j = 0; j <= 30; j++) {
-                Vector2Int loc = new Vector2Int(i, j);
-                GameObject t = Instantiate(tilePrefab, transform);
-                t.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);
-                t.GetComponent<Tile>().setSprite(getTile(loc).sprite);
+                getTile(new Vector2Int(i, j));
             }
         }
+        for (int radius = 0; radius <= RENDER_RADIUS; radius++)
+            foreach (Vector2Int loc in atRadius(Vector2Int.zero, radius))
+                getTile(loc).display(true);
+
     }
 
 

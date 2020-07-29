@@ -48,9 +48,24 @@ public partial class BoardManager : MonoBehaviour
     {
         public bool explored;
         public Sprite sprite;
+        public Tile tile;
+        GameObject g;
         public TileInfo(Sprite sprite) {
             explored = false;
             this.sprite = sprite;
+        }
+
+        public void instantiate(Vector2 loc, Transform transform) {
+            g = Instantiate(GameManager.instance.bm.tilePrefab, transform);
+            tile = g.GetComponent<Tile>();
+
+            g.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);
+            tile.setSprite(sprite);
+            g.SetActive(false);
+        }
+
+        public void display(bool active) {
+            g.SetActive(active);
         }
     }
 

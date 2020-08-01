@@ -19,7 +19,6 @@ public class Hex : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
     }
     void OnMouseOver() {
-        Debug.Log("MO");
         sr.color = Color.gray;
     }
 

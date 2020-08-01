@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
 
 public partial class BoardManager : MonoBehaviour
 {
@@ -24,13 +19,12 @@ public partial class BoardManager : MonoBehaviour
     }
 
     //Gets tile info at point, and generates it if not already present.
-    TileInfo getTile(Vector2Int loc) {
+    Tile getTile(Vector2Int loc) {
         if (tileDict.ContainsKey(loc))
             return tileDict[loc];
         else {
-            TileInfo t = bioM.getBiome(loc).genTile();
+            Tile t = bioM.getBiome(loc).genTile(loc);
             tileDict.Add(loc, t);
-            t.instantiate(loc, transform);
             return t;
         }
     }
@@ -45,7 +39,7 @@ public partial class BoardManager : MonoBehaviour
         }
         for (int radius = 0; radius <= RENDER_RADIUS; radius++)
             foreach (Vector2Int loc in atRadius(Vector2Int.zero, radius))
-                getTile(loc).display(true);
+                getTile(loc).setActive(true);
 
     }
 

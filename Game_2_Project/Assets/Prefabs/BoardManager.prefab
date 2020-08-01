@@ -127,6 +127,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 729900998}
+  - {fileID: 4585504244985054732}
+  - {fileID: 4133375213943689520}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -143,19 +145,75 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 729900994}
+  hexPrefab: {fileID: 4177269736214933209, guid: ec497462e79d7b04cacfbd35cbf446b1,
+    type: 3}
+  battlefield: {fileID: 8686691652296885431}
   partyPrefab: {fileID: 6924260836722971538, guid: 9856c3548525392408dc901b6d9a614b,
     type: 3}
-  grassSprites:
-  - {fileID: -1347532211411968617, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
-  - {fileID: -7645372005702169758, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
-  - {fileID: 6891631753638271631, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
-  - {fileID: 475435623110610922, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
-  - {fileID: 5299400320964040512, guid: 1a103a7a266d3fd459d27119e9f9e536, type: 3}
-  invertedGrassSprites:
-  - {fileID: -8302207301573362500, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
-  - {fileID: 6705257421430472308, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
-  - {fileID: -6553630681521959176, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
-  - {fileID: 8738227165821142038, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
-  - {fileID: -8523900327419701000, guid: 7dc9a45724ccaaf4dab020e98edc718d, type: 3}
-  tilePrefab: {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3,
-    type: 3}
+  tilePrefabs:
+  - {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3, type: 3}
+  - {fileID: 9081110141764578128, guid: bb0ffda1aff7d5c41a8b7638d09b3fca, type: 3}
+  - {fileID: 7868009511287250795, guid: f6064addee01ca049b22af93d86aad42, type: 3}
+  - {fileID: 4808682092350035434, guid: dec5a57a9f8f81c47821df60a166a895, type: 3}
+  - {fileID: 477828267262601920, guid: 82503e0987b461340ade00e6e413d8cc, type: 3}
+  tileHolder: {fileID: 6570737253804382995}
+--- !u!1 &6570737253804382995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4585504244985054732}
+  m_Layer: 0
+  m_Name: TileHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4585504244985054732
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6570737253804382995}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1106586882182422173}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8686691652296885431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4133375213943689520}
+  m_Layer: 0
+  m_Name: Battlefield
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4133375213943689520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8686691652296885431}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1106586882182422173}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

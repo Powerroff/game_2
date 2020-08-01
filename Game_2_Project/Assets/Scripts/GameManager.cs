@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
         bm.generateBoard();
         bm.renderBoard();
         bm.initParty();
+        bm.initBattlefield();
     }
 
     void Update() {

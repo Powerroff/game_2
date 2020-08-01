@@ -1,21 +1,20 @@
-﻿using System.Collections;
+﻿
 using System.Collections.Generic;
 using static System.Math;
 using UnityEngine;
-using System.Diagnostics;
 
 public partial class BoardManager : MonoBehaviour
 {
-    public Sprite[] grassSprites;
-    public Sprite[] invertedGrassSprites;
-    public GameObject tilePrefab;
+    public GameObject[] tilePrefabs;
+    public enum TilePrefabNames { empty, grass_1, grass_2, baseTile, invertedGrass_1 };
+    public GameObject tileHolder;
 
-    Dictionary<Vector2Int, TileInfo> tileDict;
+    Dictionary<Vector2Int, Tile> tileDict;
 
     BiomeManager bioM;
 
     public void generateBoard() {
-        tileDict = new Dictionary<Vector2Int, TileInfo>();
+        tileDict = new Dictionary<Vector2Int, Tile>();
         bioM = new BiomeManager();
         bioM.init();
     }
@@ -44,41 +43,18 @@ public partial class BoardManager : MonoBehaviour
     }
 
 
-    class TileInfo
-    {
-        public bool explored;
-        public Sprite sprite;
-        public Tile tile;
-        GameObject g;
-        public TileInfo(Sprite sprite) {
-            explored = false;
-            this.sprite = sprite;
-        }
-
-        public void instantiate(Vector2 loc, Transform transform) {
-            g = Instantiate(GameManager.instance.bm.tilePrefab, transform);
-            tile = g.GetComponent<Tile>();
-
-            g.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);
-            tile.setSprite(sprite);
-            g.SetActive(false);
-        }
-
-        public void display(bool active) {
-            g.SetActive(active);
-        }
-    }
-
-
 
     abstract class Biome
     {
-        protected BoardManager bm = GameManager.instance.bm;
-        Vector2Int center;
+        protected BoardManager bm;
+        protected Transform tileHolder;
+        protected Vector2Int center;
         float scale;
         int waves;
 
         public Biome(Vector2Int center) {
+            bm = GameManager.instance.bm;
+            tileHolder = bm.tileHolder.transform;
             this.center = center;
             scale = UnityEngine.Random.Range(.5f, 1.5f);
             waves = UnityEngine.Random.Range(4, 8);
@@ -94,7 +70,7 @@ public partial class BoardManager : MonoBehaviour
             return (Vector2.Distance(center, point) + 0.85 * Sin(waves * PI / 180f * Vector2.SignedAngle(center - point, Vector2.right))) * scale;
         }
 
-        public abstract TileInfo genTile();
+        public abstract Tile genTile(Vector2Int loc);
         
         public static Biome random(Vector2Int center) {
             int i = Random.Range(0, 2);
@@ -110,47 +86,62 @@ public partial class BoardManager : MonoBehaviour
 
     class DefaultBiome : Biome
     {
-        public DefaultBiome(Vector2Int center) : base(center) { }
+        GameObject baseTile;
+        GameObject grass_0;
+        GameObject grass_1;
+        public DefaultBiome(Vector2Int center) : base(center) {
+            baseTile = bm.tilePrefabs[(int)TilePrefabNames.baseTile];
+            grass_0 = bm.tilePrefabs[(int)TilePrefabNames.empty];
+            grass_1 = bm.tilePrefabs[(int)TilePrefabNames.grass_1];
+        }
 
-        public override TileInfo genTile() {
-            if (Random.value > .1)
-                return new TileInfo(bm.grassSprites[0]);
+        public override Tile genTile(Vector2Int loc) {
+            if (loc.Equals(center))
+                return Tile.InstantiateTile(baseTile, tileHolder, loc);
+            else if (Random.value > .1)
+                return Tile.InstantiateTile(grass_0, tileHolder, loc);
             else
-                return new TileInfo(bm.grassSprites[1]);
+                return Tile.InstantiateTile(grass_1, tileHolder, loc);
         }
     }
 
     class Grasslands : Biome
     {
-        public Grasslands(Vector2Int center) : base(center) { }
+        GameObject grass_1;
+        GameObject grass_2;
 
-        public override TileInfo genTile() {
-            float r = Random.value;
-            if (r < .7)
-                return new TileInfo(bm.grassSprites[1]);
-            else if (r < .9)
-                return new TileInfo(bm.grassSprites[2]);
-            else if (r < .95)
-                return new TileInfo(bm.grassSprites[3]);
-            else 
-                return new TileInfo(bm.grassSprites[4]);
+        public Grasslands(Vector2Int center) : base(center) {
+            grass_1 = bm.tilePrefabs[(int)TilePrefabNames.grass_1];
+            grass_2 = bm.tilePrefabs[(int)TilePrefabNames.grass_2];
+        }
+
+        public override Tile genTile(Vector2Int loc) {
+            if (Random.value > .5)
+                return Tile.InstantiateTile(grass_1, tileHolder, loc);
+            else
+                return Tile.InstantiateTile(grass_2, tileHolder, loc);
         }
     }
 
     class InvertedGrasslands : Biome
     {
-        public InvertedGrasslands(Vector2Int center) : base(center) { }
 
-        public override TileInfo genTile() {
-            float r = Random.value;
-            if (r < .7)
-                return new TileInfo(bm.invertedGrassSprites[1]);
-            else if (r < .9)
-                return new TileInfo(bm.invertedGrassSprites[2]);
-            else if (r < .95)
-                return new TileInfo(bm.invertedGrassSprites[3]);
-            else
-                return new TileInfo(bm.invertedGrassSprites[4]);
+        GameObject invertedGrass;
+        public InvertedGrasslands(Vector2Int center) : base(center) { 
+            invertedGrass = bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_1];
+        }
+
+        public override Tile genTile(Vector2Int loc) {
+            return Tile.InstantiateTile(invertedGrass, tileHolder, loc);
+            //float r = Random.value;
+            //if (r < .7)
+            //    return new TileInfo(bm.invertedGrassSprites[1]);
+            //else if (r < .9)
+            //    return new TileInfo(bm.invertedGrassSprites[2]);
+            //else if (r < .95)
+            //    return new TileInfo(bm.invertedGrassSprites[3]);
+            //else
+            //    return new TileInfo(bm.invertedGrassSprites[4]);
         }
     }
 

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
@@ -11,12 +12,30 @@ public class Tile : MonoBehaviour
     public Sprite clearedSprite;
     public bool explored = false;
     public bool reachable = false;
+    Vector2Int loc;
+    int fogDistance_sq = 16;
     
-    public static Tile InstantiateTile(GameObject prefab, Transform parent, Vector2 loc) {
+    public static Tile InstantiateTile(GameObject prefab, Transform parent, Vector2Int loc) {
         GameObject g = Instantiate(prefab, parent);
-        g.transform.SetPositionAndRotation(loc, Quaternion.identity);
+        g.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);
         g.SetActive(false);
-        return g.GetComponent<Tile>();
+        Tile t = g.GetComponent<Tile>();
+        t.loc = loc;
+        t.setFog();
+        return t;
+    }
+
+    public void updateDist(Vector2Int partyLoc) {
+        int dist_sq = (partyLoc - loc).sqrMagnitude;
+        fogDistance_sq = Math.Min(fogDistance_sq, dist_sq);
+
+        reachable = (dist_sq == 1);
+        setFog();
+    }
+
+    void setFog() {
+        float darkness = (float)(1.5 - Math.Sqrt(fogDistance_sq) / 2.5);
+        sr.color = new Color(darkness, darkness, darkness);
     }
 
 
@@ -42,7 +61,7 @@ public class Tile : MonoBehaviour
     }
 
     void OnMouseExit() {
-        sr.color = Color.white;
+        setFog();
     }
 
     void OnMouseDown() {

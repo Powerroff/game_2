@@ -6,7 +6,7 @@ using UnityEngine;
 public partial class BoardManager : MonoBehaviour
 {
     public GameObject[] tilePrefabs;
-    public enum TilePrefabNames { empty, grass_1, grass_2, baseTile, invertedGrass_1 };
+    public enum TilePrefabNames { empty, grass_1, grass_2, grass_3, grass_4, baseTile, invertedGrass_1, invertedGrass_2, invertedGrass_3, invertedGrass_4, desert_empty, desert_1, desert_2, desert_3, desert_4 };
     public GameObject tileHolder;
 
     Dictionary<Vector2Int, Tile> tileDict;
@@ -24,8 +24,9 @@ public partial class BoardManager : MonoBehaviour
         List<Biome> biomes;
         public void init() {
             biomes = new List<Biome>();
-            biomes.Add(new DefaultBiome(new Vector2Int(0, 0)));
-            for (int i = 0; i < 5; i++)
+            biomes.Add(new DefaultBiome(Vector2Int.zero));
+            biomes.Add(new Wastes(Vector2Int.zero));
+            for (int i = 0; i < 7; i++)
                 biomes.Add(Biome.random(new Vector2Int(Random.Range(-30, 30), Random.Range(-30, 30))));
         }
 
@@ -66,7 +67,7 @@ public partial class BoardManager : MonoBehaviour
             this.waves = waves;
         }
 
-        public double getDistance(Vector2Int point) {
+        public virtual double getDistance(Vector2Int point) {
             return (Vector2.Distance(center, point) + 0.85 * Sin(waves * PI / 180f * Vector2.SignedAngle(center - point, Vector2.right))) * scale;
         }
 
@@ -103,46 +104,77 @@ public partial class BoardManager : MonoBehaviour
             else
                 return Tile.InstantiateTile(grass_1, tileHolder, loc);
         }
+
+        public override double getDistance(Vector2Int point) {
+            if ((point - center).sqrMagnitude <= 16)
+                return -1;
+            else
+                return double.MaxValue;
+        }
     }
 
     class Grasslands : Biome
     {
-        GameObject grass_1;
-        GameObject grass_2;
 
-        public Grasslands(Vector2Int center) : base(center) {
-            grass_1 = bm.tilePrefabs[(int)TilePrefabNames.grass_1];
-            grass_2 = bm.tilePrefabs[(int)TilePrefabNames.grass_2];
-        }
+        public Grasslands(Vector2Int center) : base(center) { }
 
         public override Tile genTile(Vector2Int loc) {
-            if (Random.value > .5)
-                return Tile.InstantiateTile(grass_1, tileHolder, loc);
-            else
-                return Tile.InstantiateTile(grass_2, tileHolder, loc);
+            float r = Random.value;
+            if (r < .5)         // Standard grass
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.grass_1], tileHolder, loc);
+            else if (r < .8)    // Bright grass
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.grass_2], tileHolder, loc);
+            else if (r < .95)   // Mossy rock thing
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.grass_3], tileHolder, loc);
+            else                // Scrap bush
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.grass_4], tileHolder, loc);
         }
     }
 
     class InvertedGrasslands : Biome
     {
 
-        GameObject invertedGrass;
-        public InvertedGrasslands(Vector2Int center) : base(center) { 
-            invertedGrass = bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_1];
-        }
+        public InvertedGrasslands(Vector2Int center) : base(center) { }
 
         public override Tile genTile(Vector2Int loc) {
-            return Tile.InstantiateTile(invertedGrass, tileHolder, loc);
-            //float r = Random.value;
-            //if (r < .7)
-            //    return new TileInfo(bm.invertedGrassSprites[1]);
-            //else if (r < .9)
-            //    return new TileInfo(bm.invertedGrassSprites[2]);
-            //else if (r < .95)
-            //    return new TileInfo(bm.invertedGrassSprites[3]);
-            //else
-            //    return new TileInfo(bm.invertedGrassSprites[4]);
+            float r = Random.value;
+            if (r < .5)         // Thing
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_1], tileHolder, loc);
+            else if (r < .8)    // Other thing
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_2], tileHolder, loc);
+            else if (r < .95)   // Mossy rock thing
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_3], tileHolder, loc);
+            else                // Thing
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.invertedGrass_4], tileHolder, loc);
         }
+    }
+
+    class Wastes : Biome
+    {
+
+        public Wastes(Vector2Int center) : base(center) { }
+
+        public override Tile genTile(Vector2Int loc) {
+            float r = Random.value;
+            if (r < .9)         // Empty
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.desert_empty], tileHolder, loc);
+            else if (r < .9925) // Dead grass
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.desert_1], tileHolder, loc);
+            else if (r < .995)  // Radio tower
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.desert_2], tileHolder, loc);
+            else if (r < .9975) // Scrap Heap
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.desert_3], tileHolder, loc);
+            else                // Sand pit
+                return Tile.InstantiateTile(bm.tilePrefabs[(int)TilePrefabNames.desert_4], tileHolder, loc);
+        }
+
+        public override double getDistance(Vector2Int point) {
+            if (base.getDistance(point) > 40)
+                return -1;
+            else
+                return double.MaxValue;
+        }
+
     }
 
 }

@@ -36,13 +36,10 @@ public partial class BoardManager : MonoBehaviour
     }
 
     public void setReachables() {
-        foreach (Vector2Int l in atRadius(partyLoc, 2))
-            getTile(l).reachable = ((l - partyLoc).sqrMagnitude == 1);
-        foreach (Vector2Int l in atRadius(partyLoc, 1)) {
-            Debug.Log("checking " + l + " against " + partyLoc);
-            getTile(l).reachable = ((l - partyLoc).sqrMagnitude == 1);
-        }
-        getTile(partyLoc).reachable = false;
+        for (int d = 1; d <= RENDER_RADIUS; d++)
+            foreach (Vector2Int l in atRadius(partyLoc, d))
+                getTile(l).updateDist(partyLoc);
+        getTile(partyLoc).updateDist(partyLoc);
     }
 
 

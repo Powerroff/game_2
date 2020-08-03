@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Battlefield : MonoBehaviour
 {
+
+    public Hex[] Lhexes;
+    public Hex[] Chexes;
+    public Hex[] Rhexes;
     // Start is called before the first frame update
     void Start()
     {

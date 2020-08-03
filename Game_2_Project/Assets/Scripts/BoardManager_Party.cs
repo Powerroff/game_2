@@ -7,6 +7,7 @@ public partial class BoardManager : MonoBehaviour
 
     Vector2Int partyLoc;
     Party party;
+    int stamina;
 
     const int RENDER_RADIUS = 5;
 
@@ -15,6 +16,7 @@ public partial class BoardManager : MonoBehaviour
         party = Instantiate(partyPrefab, transform).GetComponent<Party>();
         partyLoc = Vector2Int.zero;
         setReachables();
+        stamina = 100;
 
     }
 
@@ -32,6 +34,8 @@ public partial class BoardManager : MonoBehaviour
                 getTile(l).setActive(false);
         }
         setReachables();
+        stamina -= 1;
+        Debug.Log("STAM " + stamina);
 
     }
 

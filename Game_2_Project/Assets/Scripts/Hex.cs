@@ -3,6 +3,8 @@
 public class Hex : MonoBehaviour
 {
     SpriteRenderer sr;
+    public int row;
+    public int col;
 
     // Start is called before the first frame update
     void Start()

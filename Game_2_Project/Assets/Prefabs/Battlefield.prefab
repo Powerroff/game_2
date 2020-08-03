@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2677483793506618549}
   - component: {fileID: 5818885691474715950}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,6 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 4
+  col: 0
 --- !u!1 &221087797165601949
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +141,7 @@ GameObject:
   - component: {fileID: 818626248329038233}
   - component: {fileID: 5081656171188003898}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,6 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 4
+  col: 2
 --- !u!1 &681742234929710191
 GameObject:
   m_ObjectHideFlags: 0
@@ -265,7 +269,7 @@ GameObject:
   - component: {fileID: 1951169228386104200}
   - component: {fileID: 7455199884002833313}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -378,6 +382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 1
+  col: 1
 --- !u!1 &793279123206133235
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +397,7 @@ GameObject:
   - component: {fileID: 6154854309072254661}
   - component: {fileID: 6812865479642076310}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,6 +510,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 0
+  col: 1
 --- !u!1 &1311031360904252333
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +525,7 @@ GameObject:
   - component: {fileID: 1298285160320072236}
   - component: {fileID: 8894783949021537775}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -630,6 +638,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 3
+  col: 2
 --- !u!1 &1320753951777132310
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +653,7 @@ GameObject:
   - component: {fileID: 3236447688574279761}
   - component: {fileID: 1355408550402113503}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -756,6 +766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 7
+  col: 0
 --- !u!1 &1410565582515330674
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +781,7 @@ GameObject:
   - component: {fileID: 2046835673022681021}
   - component: {fileID: 4409236463483909454}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -882,6 +894,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 2
+  col: 2
 --- !u!1 &1438743196917817416
 GameObject:
   m_ObjectHideFlags: 0
@@ -895,7 +909,7 @@ GameObject:
   - component: {fileID: 4559359095497254016}
   - component: {fileID: 4289285810682484843}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1008,6 +1022,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 8
+  col: 2
 --- !u!1 &1712169473957153013
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,7 +1037,7 @@ GameObject:
   - component: {fileID: 3448980194640043291}
   - component: {fileID: 8367836162102687343}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1134,6 +1150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 7
+  col: 1
 --- !u!1 &2743275574710885896
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1165,7 @@ GameObject:
   - component: {fileID: 6315742279109203866}
   - component: {fileID: 7139195034006605355}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1260,6 +1278,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 0
+  col: 2
 --- !u!1 &3641368490752469438
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,7 +1293,7 @@ GameObject:
   - component: {fileID: 8996567634645098668}
   - component: {fileID: 2530308281150258753}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1386,6 +1406,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 2
+  col: 0
 --- !u!1 &4231710045438708015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1421,7 @@ GameObject:
   - component: {fileID: 2198379488875075238}
   - component: {fileID: 381769259833416272}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1512,6 +1534,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 5
+  col: 0
 --- !u!1 &4469910958444562551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1525,7 +1549,7 @@ GameObject:
   - component: {fileID: 4064807409609007800}
   - component: {fileID: 8576233910858067897}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1638,6 +1662,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 5
+  col: 1
 --- !u!1 &4873181720903448408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1651,7 +1677,7 @@ GameObject:
   - component: {fileID: 6074562939515446958}
   - component: {fileID: 8529853877992276092}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1764,6 +1790,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 3
+  col: 0
 --- !u!1 &5316832799494215170
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,7 +1805,7 @@ GameObject:
   - component: {fileID: 3083371047446539135}
   - component: {fileID: 3947943160384860655}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1890,6 +1918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 7
+  col: 2
 --- !u!1 &5922956917863158740
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1933,7 @@ GameObject:
   - component: {fileID: 770927059779953296}
   - component: {fileID: 1608204043527242243}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2016,6 +2046,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 2
+  col: 1
 --- !u!1 &6502877139343809108
 GameObject:
   m_ObjectHideFlags: 0
@@ -2029,7 +2061,7 @@ GameObject:
   - component: {fileID: 727757772544032891}
   - component: {fileID: 2736510944053652409}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2142,6 +2174,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 6
+  col: 1
 --- !u!1 &6643671016348584700
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2189,7 @@ GameObject:
   - component: {fileID: 3179967819296660533}
   - component: {fileID: 4033811838849324125}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2268,6 +2302,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 6
+  col: 0
 --- !u!1 &7274875404057685056
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,7 +2317,7 @@ GameObject:
   - component: {fileID: 3530799412829812429}
   - component: {fileID: 4089307017195854302}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2394,6 +2430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 0
+  col: 0
 --- !u!1 &7459477138911745925
 GameObject:
   m_ObjectHideFlags: 0
@@ -2407,7 +2445,7 @@ GameObject:
   - component: {fileID: 7600251707220066719}
   - component: {fileID: 5861678602296052639}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2520,6 +2558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 4
+  col: 1
 --- !u!1 &7710814888535233574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2573,7 @@ GameObject:
   - component: {fileID: 6152503766645134173}
   - component: {fileID: 2341502013146927294}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2646,6 +2686,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 8
+  col: 0
 --- !u!1 &8193782958377472198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2701,7 @@ GameObject:
   - component: {fileID: 5440810580143590611}
   - component: {fileID: 3550914030487910247}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2772,6 +2814,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 5
+  col: 2
 --- !u!1 &8214463468252914046
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,7 +2829,7 @@ GameObject:
   - component: {fileID: 717576106087533271}
   - component: {fileID: 6899947098411712842}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2898,6 +2942,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 6
+  col: 2
 --- !u!1 &8249700761169169015
 GameObject:
   m_ObjectHideFlags: 0
@@ -2911,7 +2957,7 @@ GameObject:
   - component: {fileID: 4045644028789284519}
   - component: {fileID: 2700522308906046997}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: L1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3024,6 +3070,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 1
+  col: 0
 --- !u!1 &8284260371931184501
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,7 +3085,7 @@ GameObject:
   - component: {fileID: 197538961603980432}
   - component: {fileID: 4277497050658083293}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: R1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3150,6 +3198,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 1
+  col: 2
 --- !u!1 &8411795599230990662
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,17 +3270,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Lhexes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  Chexes: []
-  Rhexes: []
+  - {fileID: 4089307017195854302}
+  - {fileID: 2700522308906046997}
+  - {fileID: 2530308281150258753}
+  - {fileID: 8529853877992276092}
+  - {fileID: 5818885691474715950}
+  - {fileID: 381769259833416272}
+  - {fileID: 4033811838849324125}
+  - {fileID: 1355408550402113503}
+  - {fileID: 2341502013146927294}
+  Chexes:
+  - {fileID: 6812865479642076310}
+  - {fileID: 7455199884002833313}
+  - {fileID: 1608204043527242243}
+  - {fileID: 3716062363539928964}
+  - {fileID: 5861678602296052639}
+  - {fileID: 8576233910858067897}
+  - {fileID: 2736510944053652409}
+  - {fileID: 8367836162102687343}
+  Rhexes:
+  - {fileID: 7139195034006605355}
+  - {fileID: 4277497050658083293}
+  - {fileID: 4409236463483909454}
+  - {fileID: 8894783949021537775}
+  - {fileID: 5081656171188003898}
+  - {fileID: 3550914030487910247}
+  - {fileID: 6899947098411712842}
+  - {fileID: 3947943160384860655}
+  - {fileID: 4289285810682484843}
 --- !u!1 &8693293464511109802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3244,7 +3311,7 @@ GameObject:
   - component: {fileID: 3076428342884153517}
   - component: {fileID: 3716062363539928964}
   m_Layer: 0
-  m_Name: VertHex(Clone)
+  m_Name: C4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3357,3 +3424,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d64b1f86e9bc30a489e21b9b18614d1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  row: 3
+  col: 1

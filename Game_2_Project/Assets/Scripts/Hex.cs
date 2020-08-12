@@ -24,6 +24,10 @@ public class Hex : MonoBehaviour
         sr.color = Color.gray;
     }
 
+    void OnMouseDown() {
+        GameManager.instance.bm.battlefield.onHexPress(this);
+    }
+
     void OnMouseExit() {
         sr.color = new Color(255,255,255,200);
     }

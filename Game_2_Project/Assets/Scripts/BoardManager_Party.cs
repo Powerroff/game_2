@@ -37,7 +37,7 @@ public partial class BoardManager : MonoBehaviour
         stamina -= 1;
         Debug.Log("STAM " + stamina);
 
-        bfParty.moveUpBounded(Random.Range(-1, 2));
+        //bfParty.moveUpBounded(Random.Range(-1, 2));
 
     }
 

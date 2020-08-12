@@ -34,5 +34,24 @@ public class BFObject : MonoBehaviour
         moveToBounded(col, row - d);
     }
 
+    public void moveToHex(Hex h) {
+        moveTo(h.col, h.row);
+    }
+
+    public bool canMoveTo(Hex h) {
+        return false;
+        
+        
+        //switch (col) {
+     //       case 0:
+     //       case 2:
+     //           return (h.col == 1 && h.row == Mathf.Clamp(h.row, row - 1, row)) || (h.col == col && Mathf.Abs(h.row - row) == 1);
+     //      case 1:
+     //       default:
+     //          return (h.col != col && h.row == Mathf.Clamp(h.row, row, row + 1)) || (h.col == col && Mathf.Abs(h.row - row) == 1);
+     //   }
+
+    }
+
 
 }

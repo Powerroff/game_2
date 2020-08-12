@@ -58,7 +58,10 @@ public class Battlefield : MonoBehaviour
     }
 
     void AttemptSwitch(Hex h1, Hex h2) {
-
+        if (bfObjects.ContainsKey(h1) && bfObjects[h1].canMoveTo(h2)) {
+            bfObjects[h1].moveToHex(h2);
+            UpdatePosition(h1, h2);
+        }
     }
 
 

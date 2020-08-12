@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_Name
-      value: Grass_2
+      value: Grass_2 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7084906637672750330, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
@@ -18,6 +18,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6891631753638271631, guid: 1a103a7a266d3fd459d27119e9f9e536,
         type: 3}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: name
+      value: Weedy Underbrush
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

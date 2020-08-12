@@ -4,19 +4,6 @@ public partial class BoardManager : MonoBehaviour
 {
 
 
-    
-    public GameObject canvas;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     //Gets tile info at point, and generates it if not already present.
     Tile getTile(Vector2Int loc) {
@@ -40,6 +27,10 @@ public partial class BoardManager : MonoBehaviour
         for (int radius = 0; radius <= RENDER_RADIUS; radius++)
             foreach (Vector2Int loc in atRadius(Vector2Int.zero, radius))
                 getTile(loc).setActive(true);
+
+        eventText.text = "";
+        eventTitle.text = "";
+
 
     }
 

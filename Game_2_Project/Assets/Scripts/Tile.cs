@@ -7,14 +7,18 @@ public class Tile : MonoBehaviour
     GameManager gm;
     BoardManager bm;
 
-    //Personal Vars
-    SpriteRenderer sr;
+    //Prefab Vars
     public Sprite clearedSprite;
+    public String name;
+    public String description;
+
+    //Personal Vars
     public bool explored = false;
     public bool reachable = false;
     Vector2Int loc;
     int fogDistance_sq = 16;
-    
+    SpriteRenderer sr;
+
     public static Tile InstantiateTile(GameObject prefab, Transform parent, Vector2Int loc) {
         GameObject g = Instantiate(prefab, parent);
         g.transform.SetPositionAndRotation((Vector2)loc, Quaternion.identity);
@@ -69,6 +73,7 @@ public class Tile : MonoBehaviour
             if (!explored)
                 explore();
             bm.moveTo(Vector2Int.RoundToInt((Vector2)transform.position));
+            bm.executeTileEvents(this);
         }
     }
 

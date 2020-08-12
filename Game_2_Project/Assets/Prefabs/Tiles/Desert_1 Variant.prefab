@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 2643806523119151600, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_Name
-      value: Desert_1
+      value: Desert_1 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7084906637672750330, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
@@ -24,6 +24,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 130452656225014213, guid: bc9e87fb9a1813249ad538c87c144fcc,
         type: 3}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: name
+      value: Withered Grass
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

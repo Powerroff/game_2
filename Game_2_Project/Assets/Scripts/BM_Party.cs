@@ -18,6 +18,8 @@ public partial class BoardManager : MonoBehaviour
         setReachables();
         stamina = 100;
 
+        canvas.transform.SetParent(party.transform);
+
     }
 
     public void moveTo(Vector2Int loc) {

@@ -18,6 +18,7 @@ public class Tile : MonoBehaviour
     Vector2Int loc;
     int fogDistance_sq = 16;
     SpriteRenderer sr;
+    Color tempColor = Color.black;
 
     public static Tile InstantiateTile(GameObject prefab, Transform parent, Vector2Int loc) {
         GameObject g = Instantiate(prefab, parent);
@@ -25,7 +26,7 @@ public class Tile : MonoBehaviour
         g.SetActive(false);
         Tile t = g.GetComponent<Tile>();
         t.loc = loc;
-        t.setFog();
+        t.setBrightness(16);
         return t;
     }
 
@@ -34,11 +35,11 @@ public class Tile : MonoBehaviour
         fogDistance_sq = Math.Min(fogDistance_sq, dist_sq);
 
         reachable = (dist_sq == 1);
-        setFog();
+        setBrightness(Math.Min(fogDistance_sq + 12, dist_sq));
     }
 
-    void setFog() {
-        float darkness = (float)(1.5 - Math.Sqrt(fogDistance_sq) / 2.5);
+    void setBrightness(int level) {
+        float darkness = (float)(1.5 - Math.Sqrt(level) / 2.5);
         sr.color = new Color(darkness, darkness, darkness);
     }
 
@@ -58,14 +59,14 @@ public class Tile : MonoBehaviour
         explored = true;
     }
 
-
-    void OnMouseOver() {
-        if (reachable)
-            sr.color = Color.gray;
+    void OnMouseExit() {
+        sr.color = tempColor;
     }
 
-    void OnMouseExit() {
-        setFog();
+    private void OnMouseEnter() {
+        tempColor = sr.color;
+        if (reachable)
+            sr.color = Color.gray;
     }
 
     void OnMouseDown() {

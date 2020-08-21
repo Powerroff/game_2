@@ -29,6 +29,21 @@ PrefabInstance:
       propertyPath: name
       value: Inverted Swamplands
       objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: description
+      value: Shimmering pools of water cover the ground.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: unclearedText
+      value: Wading through the water, you feel revitalized.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: stamCost
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

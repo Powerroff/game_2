@@ -23,6 +23,16 @@ PrefabInstance:
       propertyPath: name
       value: Weedy Underbrush
       objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: description
+      value: Weeds cover the ground.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: unclearedText
+      value: Traversal is easier here, but there's not much to scavenge.
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

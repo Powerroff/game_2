@@ -23,6 +23,26 @@ PrefabInstance:
       propertyPath: name
       value: Dense Underbrush
       objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: stamCost
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: description
+      value: Thick vegetation grows here.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: unclearedText
+      value: You cut a path through, collecting some branches.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: wood
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

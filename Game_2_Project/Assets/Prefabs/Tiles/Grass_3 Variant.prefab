@@ -23,6 +23,26 @@ PrefabInstance:
       propertyPath: name
       value: A Mossy Rock
       objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: description
+      value: A good vantage point.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: unclearedText
+      value: You pause a moment to rest and scout. Some wood lies nearby.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: stamCost
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: wood
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

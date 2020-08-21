@@ -50,6 +50,11 @@ MonoBehaviour:
     type: 3}
   name: Empty Grasslands
   description: 
+  unclearedText: There's a clearing with not much of interest.
+  clearedText: You retrace your steps. There's not much here.
+  stamCost: 1
+  wood: 0
+  steel: 0
   explored: 0
   reachable: 0
 --- !u!212 &7084906637672750330

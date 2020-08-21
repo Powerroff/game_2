@@ -29,6 +29,31 @@ PrefabInstance:
       propertyPath: name
       value: Fungal Growth
       objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: description
+      value: The vegetation blooms in unnatural colors.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: unclearedText
+      value: The branches here are difficult to harvest, but can function as scrap.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: stamCost
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: steel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7702833799976744772, guid: 6461bbed4f8da7643a646db3afa241c3,
+        type: 3}
+      propertyPath: scrap
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8258860304964813103, guid: 6461bbed4f8da7643a646db3afa241c3,
         type: 3}
       propertyPath: m_LocalPosition.x

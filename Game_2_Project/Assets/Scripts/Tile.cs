@@ -9,8 +9,13 @@ public class Tile : MonoBehaviour
 
     //Prefab Vars
     public Sprite clearedSprite;
-    public String name;
-    public String description;
+    public string name;
+    public string description;
+    public string unclearedText;
+    public string clearedText;
+    public int stamCost;
+    public int wood;
+    public int scrap;
 
     //Personal Vars
     public bool explored = false;
@@ -71,10 +76,10 @@ public class Tile : MonoBehaviour
 
     void OnMouseDown() {
         if (reachable) {
-            if (!explored)
-                explore();
             bm.moveTo(Vector2Int.RoundToInt((Vector2)transform.position));
             bm.executeTileEvents(this);
+            if (!explored)
+                explore();
         }
     }
 

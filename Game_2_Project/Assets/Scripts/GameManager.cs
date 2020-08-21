@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
         bm.renderBoard();
         bm.initParty();
         bm.initBattlefield();
+
+        bm.addResources(-100, 10, 0);
     }
 
     void Update() {
